@@ -34,7 +34,7 @@ def validate_pp_p2(pp):
                 if (unit == "cm" and 150 <= int(val) <= 193) or (unit == "in" and 59 <= int(val) <= 76):
                     print("valid hgt: {}.{} (cm: 150-193, in: 59-76)".format(val,unit))
                     valid_props["hgt"] = True
-        elif n == "hcl" and re.match(r"#[\da-f]{6}", v) != None:
+        elif n == "hcl" and re.match(r"#[\da-f]{6}$", v) != None:
             print("valid hcl: "+v)
             valid_props["hcl"] = True
         elif n == "ecl" and v in eye_colors:
