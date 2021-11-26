@@ -1,0 +1,4 @@
+(executable
+ (flags :standard -w -26-27-14)
+ (libraries str base)
+ (name main))

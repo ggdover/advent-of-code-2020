@@ -1,0 +1,30 @@
+
+TODO LIST
+
+* I think I could write a function that is a more generalized 
+  version of what the "merge_non_empty_lines" function does.
+  It could be namned something like "filter_fold_map" considering
+  what the meaning of those words (filter, fold and map) has in
+  Ocaml's Stdlib and Jane street's Base/Core library.
+
+  Here is a half-ass or short start to implementing such function:
+
+  List.filter_map
+
+  let filter_fold_map f l =
+      let rec loop accum_l l =
+          match l with
+          | [] -> accum_l
+          | h::t -> 
+              (match f h with
+               | None -> loop accum_l t
+               | Some x -> loop (h :: accum_l) t)
+      in
+      loop 
+
+  let fold_func a b = 
+
+  in
+  List.fold_left fold_func a 
+
+  String.cat 
